@@ -1,0 +1,9 @@
+diff out/good/Parent.java out/bad/Parent.java
+85c85
+<         new org.apache.thrift.meta_data.StructMetaData(org.apache.thrift.protocol.TType.STRUCT, Child.class)));
+---
+>         new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.STRUCT        , "Child")));
+263,265d262
+<     if (Child != null) {
+<       Child.validate();
+<     }
