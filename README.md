@@ -45,5 +45,5 @@ diff out/good/Parent.java out/bad/Parent.java
 ```
 
 In the `bad` case, the generated `Parent.java` class:
-* has incorrect metadata about its `Child` field. It is not correctly reported as `StructMetaData` but instead appears as `FieldValueMetaData` (This is how I noticed this issue: the `StructMetaData`--and the Java classname it provides--is important for a project I'm working on).
+* Has incorrect metadata about its `Child` field. It is not correctly reported as `StructMetaData` but instead appears as `FieldValueMetaData` (This is how I noticed this issue: the `StructMetaData`--and the Java classname it provides--is important for a project I'm working on).
 * A call to `Child.validate()` has disappeared.
