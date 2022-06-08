@@ -47,3 +47,8 @@ diff out/good/Parent.java out/bad/Parent.java
 In the `bad` case, the generated `Parent.java` class:
 * Has incorrect metadata about its `Child` field. It is not correctly reported as `StructMetaData` but instead appears as `FieldValueMetaData` (This is how I noticed this issue: the `StructMetaData`--and the Java classname it provides--is important for a project I'm working on).
 * A call to `Child.validate()` has disappeared.
+
+## Update 2022-06-08
+Discovered that bug [THRIFT-4086](https://issues.apache.org/jira/browse/THRIFT-4086) already exists reporting this issue on the Apache Thrift JIRA.
+I've submitted a [PR with a fix](https://github.com/apache/thrift/pull/2619).
+
